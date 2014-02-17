@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>cells</key>
+	<array>
+		<dict>
+			<key>column</key>
+			<integer>1</integer>
+			<key>row</key>
+			<integer>1</integer>
+			<key>stringValue</key>
+			<string>"ChemHelper v1.0 by David Stancu"Written for test on 10/1/2010"My introduction screen!"NOTE, OUTPUT FUNCTIONT TEXT WILL WRAPPPPPPPPP!!!!!"There are 8 rows, 16 columnsClrHomeOutput(1,1,"ChemHelper  v1.0")Output(7,1,"by: David Stancu")Output(8,1,"of aicodelab.com")Pause "Clear Home Screen, display menuClrHomeLbl MEMenu("ChemHelper v1.0","Formulas",FR,"References",RE,"Quit :( ?",QQ)"Quit SectionLbl QQ"The most awesomely easy function evar.ClrHomeStop"References SectionLbl REMenu("Mini Reference","Phys Constants",PC,"Metric Schemes",MS,"Go home",ME)
+
+Lbl MS
+ClrHome
+Output(1,1,"Mega  = 1million")
+Output(2,1,"Kilo  = 1,000")
+Output(3,1,"Hecto = 100"
+Output(4,1,"Deca  = 10")
+Output(5,1,"Deci  = 1/10")
+Output(6,1,"Centi = 1/100")
+Output(7,1,"Milli = 1/1,000")
+Output(8,1,"Micro= millionth")
+Pause
+Goto RELbl PCMenu("Phys Constants","Water/H20",WT,"Go back",RE,"Go home",ME)Lbl WT
+ClrHomeOutput(1,1,"Specific heat:")Output(2,1,"S: 2.11j/g/C")Output(3,1,"L: 4.18j/g/C")Output(4,1,"G: 2.00j/g/C")Output(6,1,"Fusion: 334j/g")Output(7,1,"Vap...: 2260j/g")Pause Goto PC"Formulas SectionLbl FRMenu("Formulas","Conversions",CO,"H20 Change",WA,"Go home",ME)"ConversionsLbl COMenu("Conversions","C-&gt;K",CK,"K-&gt;C",KC,"C-&gt;F",CF,"F-&gt;C",FC,"j-&gt;cal",JC,"cal-&gt;j",CJ,"Go back",FR)"Celsius to KelvinLbl CK
+ClrHomeInput "C? ",C(C+273)→KDisp "K: ",KPause Goto CO"Kelvin to CelsiusLbl KC
+ClrHomeInput "K? ",K(K-273)→CDisp "C: ",CPause Goto CO
+
+"Celsius to Farenheit
+Lbl CF
+ClrHome
+Input "C? ",C
+((C(9/5))+32)→F
+Disp "F: ",F
+Pause 
+Goto CO
+
+"Farenheit to Celisus
+Lbl FC
+ClrHome
+Input "F? ",F
+((F-32)(5/9))→C
+Disc "C: ",C
+Pause 
+Goto CO
+
+"Joules to calories
+Lbl JC
+ClrHome
+Input "J? ",J
+(J/4.184)→C
+Disp "Cal: ",C
+Pause 
+Goto CO
+
+"Calories to joules
+Lbl CJ
+ClrHome
+Input "Cal? ",C
+(C(4.184))→J
+Disp "J: ",J
+Pause 
+Goto CO
+"H20 Temperature Change StartLbl WAClrHomeOutput(1,1,"Celsius ONLY!")Output(8,1,"Continue [ENTER]")Pause "Ask user for starting temperature after clearing the screenClrHomeInput "Start Temp? ",AInput "Finish Temp? ",B"Error correction for something I'm too lazy to write inIf (A&gt;B)ThenClrHomeOutput(1,5,"Whoops!!")Output(3,1,"If decreasing,")Output(4,1,"put lower # 1st,")Output(5,1,"&amp; add neg sign,")Output(6,1,"to the result!")Output(8,1,"Again? [ENTER]")Pause Goto WAEnd"Error endInput "Weight [g]? ",CDisp "You said:",A,B,CPause "Find difference in starting and stopping temp, shift to variableabs(A-B)→D"H20 only solidIf A&lt;0 and B&lt;0Then(2.11)(C)(D)→EEnd"H20 only solid end"H20 only liquidIf A&gt;0&lt;100 and B&gt;0&lt;100Then(4.18)(C)(D)→EEnd"H20 only liquid end"H20 only gasIf A&gt;100 and B&gt;100Then(2)(C)(D)→EEnd"H20 only gas end"H20 solid to liquid onlyIf A&lt;0 and B&gt;0Then(2.11)(C)(abs(A))→S(334)(C)→F(F+S)→L(4.18)(C)(B)→N(N+L)→EEnd"H20 solid to liquid end"H20 liquid to gas onlyIf A&gt;0&lt;100 and B&gt;100Then(4.18)(C)(100-A)→S(2260)(C)→F(F+S)→L(2)(C)(B-100)→N(N+L)→EEnd"H20 liquid to gas end"H20 solid to liquid to gas (all three!)If A&lt;0 and B&gt;100Then(2.11)(C)(abs(A))→S(334)(C)→F(F+S)→L(4.18)(C)(100)→N(N+L)→V(2260)(C)→Z(V+Z)→X(2)(C)(B-100)→W(X+W)→EEnd"Answers OnlyDisp "Answer (joules):",EPause ClrHomeGoto FR"H20 Temperature Change END</string>
+		</dict>
+	</array>
+	<key>device name</key>
+	<string>CHEMHELP</string>
+	<key>device type</key>
+	<string>TI-84 Plus</string>
+	<key>isProtected</key>
+	<true/>
+	<key>object type</key>
+	<string>Program</string>
+</dict>
+</plist>
