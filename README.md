@@ -1,4 +1,4 @@
-AutoTick
+ChemHelper (yaaaaaaay!)
 ========
 
 ## What is it?
